@@ -1,0 +1,116 @@
+body {
+    background: linear-gradient(135deg, blue, purple, pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    background: #19141f; /* Solid dark color so the label cutout blends seamlessly */
+    padding: 30px 25px 25px 25px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    color: lavender;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* Wrapper container for each input and label pair */
+.input-group {
+    position: relative;
+    margin-bottom: 22px;
+    text-align: left;
+}
+
+.input-box {
+    width: 100%;
+    padding: 14px 15px;
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid lavender;
+    background: rgba(0, 0, 0, 0.393);
+    color: lavender;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Give password input extra space on the right for the eye button */
+.password-box {
+    padding-right: 45px;
+}
+
+/* Default label (centered inside the input box) */
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: lavender;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    pointer-events: none;
+    transition: 0.25s ease all;
+}
+
+/* Email-style float: sits right ON the border line with a matching background cutout */
+.input-box:focus ~ label,
+.input-box:not(:placeholder-shown) ~ label {
+    top: 0;                    /* Aligns exactly with the top border */
+    left: 14px;
+    transform: translateY(-50%); /* Centers it right on the line */
+    font-size: 11px;
+    font-weight: bold;
+    background: #19141f;       /* Matches container background to mask the border */
+    padding: 0 6px;            /* Gives breathing room to the text over the border */
+    color: lavender;
+}
+
+/* Toggle Password Button Styling */
+.toggle-btn {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: lavender;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.toggle-btn:hover {
+    opacity: 1;
+}
+
+/* Styling for the Login button */
+button[type="submit"] {
+    background: lavender;
+    color: purple;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background: rgb(215, 205, 255);
+}
